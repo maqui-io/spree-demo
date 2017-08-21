@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'carmen'
+Carmen.i18n_backend.locale = :es
+
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
